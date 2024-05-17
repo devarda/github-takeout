@@ -1,0 +1,29 @@
+{
+  "name": "github-takeout",
+  "version": "1.0.0",
+  "description": "Hackable scripts to archive your GitHub data using GitHub's API: Download all your Gists, all starred Gists, all forked Gists, list of starred Repositories, CSV exports of Gists and more.",
+  "main": "",
+  "scripts": {
+    "download-forked-gists": "node bin/download-forked-gists.js",
+    "download-my-gists": "node bin/download-my-gists.js",
+    "download-starred-gists": "node bin/download-starred-gists.js",
+    "list-gists-with-files": "node bin/list-gists-with-files.js",
+    "list-gists": "node bin/list-gists.js",
+    "list-starred-gists-with-files": "node bin/list-starred-gists-with-files.js",
+    "list-starred-gists": "node bin/list-starred-gists.js",
+    "list-starred-repos": "node bin/list-starred-repos.js",
+    "download-all": "npm-run-all download-forked-gists download-my-gists download-starred-gists list-gists-with-files list-gists list-starred-gists-with-files list-starred-gists list-starred-repos"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "repository": "git@github.com:devarda/github-takeout.git",
+  "author": "Arda <50584220+devarda@users.noreply.github.com>",
+  "private": false
+}
