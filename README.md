@@ -23,7 +23,7 @@ Then, checkout the repo and install the dependencies:
 
 ```bash
 # Setup
-git clone ..........
+git clone https://github.com/devarda/github-takeout.git
 cd github-takeout
 yarn install
 ```
@@ -129,4 +129,4 @@ Example:
 
 If you find this project helpful, please consider supporting me. My work is not sponsored and I am an independent developer. Every bit helps. ❤️
 
-Buy me a coffee: [☕️](https://buymeacoffee.com/devarda)
+[Buy me a coffee: ☕️](https://buymeacoffee.com/devarda)
