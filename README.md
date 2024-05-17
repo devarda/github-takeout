@@ -13,7 +13,7 @@ If you are considering deleting a GitHub previous work-account, sunsetting an un
 - Download a list of all your starred Gists as a CSV
 - Download a list of all your starred Repositories as a CSV
 
-Look at the code for the options you can use to customize the scripts to your needs. Start from the bin folder and work your way up to the function files where you can hack the fields you want to include in the CSV files, or adjust the options. There are hidden options such as excluding the Gists you have created while downloading all your starred Gists. This is so that it wouldn't duplicate with the Gists you have downloaded if you were downloading it all, but it may be useful to disable that for some other use case.
+Look at the code for the options you can use to customize the scripts to your needs. Start from the [bin](./bin) folder and work your way up to the [function files](./lib) where you can hack the fields you want to include in the CSV files, or adjust the options. There are hidden options such as excluding the Gists you have _starred_ but _belong to you_. This is so that it wouldn't duplicate with the Gists when you would download _your Gists_ **and** _your starred Gists_, but it may be useful to disable that for some other use case.
 
 ## Usage
 
@@ -34,7 +34,7 @@ Then, create a `.env` file (or copy sample.env) in the root of the project and a
 GITHUB_TOKEN=your_github_token
 ```
 
-Then, run the script you want in the [bin](./bin) folder where you can adjust the options in the script. Or you may use the package scripts descried below.
+Then, run the script you want in the [bin](./bin) folder where you can adjust the options in the script. Or you may use the package scripts described below.
 
 ### Download Everything
 
@@ -48,7 +48,7 @@ yarn download-all
 
 ### Download Forked Gists
 
-This script will download the gists that you have forked. Each gist will be in a separate folder where the name of the folder is determined by the description or the id of the gist if the description is not available. The files will be stored in the gist folder as separate files.
+This script will download the Gists that you have forked. Each gist will be in a separate folder where the name of the folder is determined by the description or the id of the gist if the description is not available. The files will be stored in the gist folder as separate files.
 
 ```bash
 
@@ -58,7 +58,7 @@ yarn download-forked-gists
 
 ### Download All Gists Created By You
 
-This script will download gists created by you (minus the ones that you've forked). The distinction is made because if you are the type of person that forks and modifies your gists then you can easily copy the contents of forked-gists and combine them with your gists. If you are the type of person that forks to keep a copy of the original then you can have a separate folder for each.
+This script will download Gists created by you, minus the ones that you've forked. The distinction is made because if you are the type of person that forks and modifies your Gists then you can easily copy the contents of forked-gists and combine them with your Gists. If you are the type of person that forks to keep a copy of the original then you can have a separate folder for each.
 
 ```bash
 # download my gists
@@ -77,7 +77,7 @@ yarn download-starred-gists
 
 ### List All Gists As CSV
 
-These scripts will list all your gists in a CSV file. You have the option of listing the gists with files or without files. The ones with files is meant to act as an index for the gists that you've downloaded and have redundant information of the parent gist for sorting purposes. The list will include forked and original gists that are in your account.
+These scripts will list all your Gists in a CSV file. You have the option of listing the Gists with files or without files. The list with files is meant to act as an index for the Gists that you've downloaded and have redundant information of the Gist group for sorting, and one row per file under the Gist. The list will include forked and original Gists that are in your account.
 
 ```bash
 # list gists with files
@@ -90,7 +90,7 @@ yarn list-gists
 
 ### List All Gists You've Starred As CSV
 
-These scripts will list all the gists you've starred in a CSV file. You have the option of listing the gists with files or without files like the previous script.
+These scripts will list all the Gists you've starred in a CSV file. You have the option of listing the Gists with files or without files like the previous script.
 
 ```bash
 
@@ -127,6 +127,6 @@ Example:
 
 ## Support This Project
 
-If you find this project helpful, please consider supporting me. My work is not sponsored and I am an independent developer. Every bit helps. ❤️
+If you find this project helpful, please consider supporting me. I am an independent developer, and my work is for you! Every bit helps. ❤️
 
-[Buy me a coffee: ☕️](https://buymeacoffee.com/devarda)
+<a href="https://www.buymeacoffee.com/devarda" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
